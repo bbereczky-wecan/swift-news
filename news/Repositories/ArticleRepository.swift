@@ -12,7 +12,7 @@ final class ArticleRepository: ObservableObject {
     private var cancellable: AnyCancellable?
     @Published var articles: [Article]?
 
-    let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=db725ddeb9364ab7a645c52154d2df28")!
+    let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=cb51980d1c314897876a792646c59c10")!
     
     func fetchData() {
         cancellable = URLSession.shared.dataTaskPublisher(for: url)
