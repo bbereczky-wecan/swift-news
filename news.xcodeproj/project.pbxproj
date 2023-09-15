@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F30043112AB4666700049397 /* ArticleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30043102AB4666700049397 /* ArticleRepository.swift */; };
+		F30043142AB4674200049397 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30043132AB4674200049397 /* ArticleModel.swift */; };
+		F30043172AB467EF00049397 /* NewsApiResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30043162AB467EF00049397 /* NewsApiResponseModel.swift */; };
+		F300431A2AB46E1E00049397 /* SwiftDotenv in Frameworks */ = {isa = PBXBuildFile; productRef = F30043192AB46E1E00049397 /* SwiftDotenv */; };
+		F3CA66272AB08B8200A894A5 /* SearchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA66262AB08B8200A894A5 /* SearchScreenView.swift */; };
+		F3CA66292AB08FE600A894A5 /* SearchListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA66282AB08FE600A894A5 /* SearchListItem.swift */; };
+		F3CA662B2AB094DA00A894A5 /* SearchTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA662A2AB094DA00A894A5 /* SearchTextFieldView.swift */; };
 		F3D9515D2AB059C400247CB1 /* newsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9515C2AB059C400247CB1 /* newsApp.swift */; };
 		F3D9515F2AB059C400247CB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9515E2AB059C400247CB1 /* ContentView.swift */; };
 		F3D951612AB059C500247CB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3D951602AB059C500247CB1 /* Assets.xcassets */; };
@@ -34,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F30043102AB4666700049397 /* ArticleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRepository.swift; sourceTree = "<group>"; };
+		F30043132AB4674200049397 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
+		F30043162AB467EF00049397 /* NewsApiResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApiResponseModel.swift; sourceTree = "<group>"; };
+		F3CA66262AB08B8200A894A5 /* SearchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenView.swift; sourceTree = "<group>"; };
+		F3CA66282AB08FE600A894A5 /* SearchListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListItem.swift; sourceTree = "<group>"; };
+		F3CA662A2AB094DA00A894A5 /* SearchTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextFieldView.swift; sourceTree = "<group>"; };
 		F3D951592AB059C400247CB1 /* news.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = news.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D9515C2AB059C400247CB1 /* newsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsApp.swift; sourceTree = "<group>"; };
 		F3D9515E2AB059C400247CB1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F300431A2AB46E1E00049397 /* SwiftDotenv in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +85,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F300430F2AB4664300049397 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				F30043102AB4666700049397 /* ArticleRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		F30043152AB4675000049397 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F30043132AB4674200049397 /* ArticleModel.swift */,
+				F30043162AB467EF00049397 /* NewsApiResponseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F300431B2AB46EA400049397 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		F3CA66252AB08B5C00A894A5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F3D9515E2AB059C400247CB1 /* ContentView.swift */,
+				F3CA66262AB08B8200A894A5 /* SearchScreenView.swift */,
+				F3CA66282AB08FE600A894A5 /* SearchListItem.swift */,
+				F3CA662A2AB094DA00A894A5 /* SearchTextFieldView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F3D951502AB059C400247CB1 = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +143,11 @@
 		F3D9515B2AB059C400247CB1 /* news */ = {
 			isa = PBXGroup;
 			children = (
+				F300431B2AB46EA400049397 /* Config */,
+				F30043152AB4675000049397 /* Models */,
+				F300430F2AB4664300049397 /* Repositories */,
+				F3CA66252AB08B5C00A894A5 /* Views */,
 				F3D9515C2AB059C400247CB1 /* newsApp.swift */,
-				F3D9515E2AB059C400247CB1 /* ContentView.swift */,
 				F3D951602AB059C500247CB1 /* Assets.xcassets */,
 				F3D951622AB059C500247CB1 /* Preview Content */,
 			);
@@ -143,6 +195,9 @@
 			dependencies = (
 			);
 			name = news;
+			packageProductDependencies = (
+				F30043192AB46E1E00049397 /* SwiftDotenv */,
+			);
 			productName = news;
 			productReference = F3D951592AB059C400247CB1 /* news.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +270,9 @@
 				Base,
 			);
 			mainGroup = F3D951502AB059C400247CB1;
+			packageReferences = (
+				F30043182AB46E1E00049397 /* XCRemoteSwiftPackageReference "swift-dotenv" */,
+			);
 			productRefGroup = F3D9515A2AB059C400247CB1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,7 +315,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3CA66292AB08FE600A894A5 /* SearchListItem.swift in Sources */,
+				F3CA662B2AB094DA00A894A5 /* SearchTextFieldView.swift in Sources */,
+				F3CA66272AB08B8200A894A5 /* SearchScreenView.swift in Sources */,
 				F3D9515F2AB059C400247CB1 /* ContentView.swift in Sources */,
+				F30043172AB467EF00049397 /* NewsApiResponseModel.swift in Sources */,
+				F30043112AB4666700049397 /* ArticleRepository.swift in Sources */,
+				F30043142AB4674200049397 /* ArticleModel.swift in Sources */,
 				F3D9515D2AB059C400247CB1 /* newsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,6 +641,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F30043182AB46E1E00049397 /* XCRemoteSwiftPackageReference "swift-dotenv" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/thebarndog/swift-dotenv.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F30043192AB46E1E00049397 /* SwiftDotenv */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F30043182AB46E1E00049397 /* XCRemoteSwiftPackageReference "swift-dotenv" */;
+			productName = SwiftDotenv;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F3D951512AB059C400247CB1 /* Project object */;
 }
