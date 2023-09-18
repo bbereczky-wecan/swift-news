@@ -11,15 +11,20 @@ struct SearchTextFieldView: View {
     @State private var searchText: String = ""
     
     var body: some View {
-        VStack {
-            TextField("Search", text: $searchText)
+        Form {
+            HStack {
+                TextField("Search", text: $searchText)
                 .padding(10)
                 .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
-            HStack {
-                Text(searchText)
-                Spacer()
+                .submitLabel(.search)
+                Button(action: submit) {
+                    Text("Search").padding(10).background(.blue).fontWeight(.bold).foregroundColor(.white).clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
             }
+          }
         }
+    }
+    
+    func submit() {
     }
 }
 

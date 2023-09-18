@@ -13,18 +13,36 @@ struct SearchScreenView: View {
     init(articlesRepository: ArticleRepository) {
         self.articlesRepository = articlesRepository
         Task {
-            articlesRepository.fetchData()
+            articlesRepository.findAll()
         }
     }
+    
+    @State private var searchText: String = ""
 
     var body: some View {
         VStack {
-            SearchTextFieldView().padding()
+            Form {
+                HStack {
+                    TextField("Search", text: $searchText)
+                    .padding(10)
+                    .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
+                    .submitLabel(.search)
+                    Button(action: submit) {
+                        Text("Search").padding(10).background(.blue).fontWeight(.bold).foregroundColor(.white).clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                    }
+              }
+            }.frame(height: 120).padding(.bottom, -10)
             if let articles = articlesRepository.articles {
                 List(articles, id: \.id) { article in SearchListItem(article: article)}
-                Spacer()
+
             }
             Spacer()
+        }
+    }
+    
+    func submit() {
+        Task {
+            articlesRepository.findByTitle(title: searchText)
         }
     }
 }
