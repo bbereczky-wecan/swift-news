@@ -11,6 +11,7 @@
 		F30043142AB4674200049397 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30043132AB4674200049397 /* ArticleModel.swift */; };
 		F30043172AB467EF00049397 /* NewsApiResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30043162AB467EF00049397 /* NewsApiResponseModel.swift */; };
 		F300431A2AB46E1E00049397 /* SwiftDotenv in Frameworks */ = {isa = PBXBuildFile; productRef = F30043192AB46E1E00049397 /* SwiftDotenv */; };
+		F3A699A72AB8A76C00544DEF /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = F3A699A62AB8A76C00544DEF /* URLImage */; };
 		F3CA66272AB08B8200A894A5 /* SearchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA66262AB08B8200A894A5 /* SearchScreenView.swift */; };
 		F3CA66292AB08FE600A894A5 /* SearchListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA66282AB08FE600A894A5 /* SearchListItem.swift */; };
 		F3D9515D2AB059C400247CB1 /* newsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9515C2AB059C400247CB1 /* newsApp.swift */; };
@@ -20,6 +21,8 @@
 		F3D9516E2AB059C500247CB1 /* newsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9516D2AB059C500247CB1 /* newsTests.swift */; };
 		F3D951782AB059C500247CB1 /* newsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D951772AB059C500247CB1 /* newsUITests.swift */; };
 		F3D9517A2AB059C500247CB1 /* newsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D951792AB059C500247CB1 /* newsUITestsLaunchTests.swift */; };
+		F3F870842AB8A99300EB0A3D /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F870832AB8A99300EB0A3D /* AsyncImageView.swift */; };
+		F3F870872AB8A9C800EB0A3D /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F870862AB8A9C800EB0A3D /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,8 @@
 		F3D951732AB059C500247CB1 /* newsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = newsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D951772AB059C500247CB1 /* newsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsUITests.swift; sourceTree = "<group>"; };
 		F3D951792AB059C500247CB1 /* newsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F3F870832AB8A99300EB0A3D /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		F3F870862AB8A9C800EB0A3D /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3A699A72AB8A76C00544DEF /* URLImage in Frameworks */,
 				F300431A2AB46E1E00049397 /* SwiftDotenv in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,6 +119,7 @@
 				F3D9515E2AB059C400247CB1 /* ContentView.swift */,
 				F3CA66262AB08B8200A894A5 /* SearchScreenView.swift */,
 				F3CA66282AB08FE600A894A5 /* SearchListItem.swift */,
+				F3F870832AB8A99300EB0A3D /* AsyncImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -140,6 +147,7 @@
 		F3D9515B2AB059C400247CB1 /* news */ = {
 			isa = PBXGroup;
 			children = (
+				F3F870852AB8A9BA00EB0A3D /* Handlers */,
 				F300431B2AB46EA400049397 /* Config */,
 				F30043152AB4675000049397 /* Models */,
 				F300430F2AB4664300049397 /* Repositories */,
@@ -176,6 +184,14 @@
 			path = newsUITests;
 			sourceTree = "<group>";
 		};
+		F3F870852AB8A9BA00EB0A3D /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				F3F870862AB8A9C800EB0A3D /* ImageLoader.swift */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -194,6 +210,7 @@
 			name = news;
 			packageProductDependencies = (
 				F30043192AB46E1E00049397 /* SwiftDotenv */,
+				F3A699A62AB8A76C00544DEF /* URLImage */,
 			);
 			productName = news;
 			productReference = F3D951592AB059C400247CB1 /* news.app */;
@@ -269,6 +286,7 @@
 			mainGroup = F3D951502AB059C400247CB1;
 			packageReferences = (
 				F30043182AB46E1E00049397 /* XCRemoteSwiftPackageReference "swift-dotenv" */,
+				F3A699A52AB8A76C00544DEF /* XCRemoteSwiftPackageReference "url-image" */,
 			);
 			productRefGroup = F3D9515A2AB059C400247CB1 /* Products */;
 			projectDirPath = "";
@@ -315,7 +333,9 @@
 				F3CA66292AB08FE600A894A5 /* SearchListItem.swift in Sources */,
 				F3CA66272AB08B8200A894A5 /* SearchScreenView.swift in Sources */,
 				F3D9515F2AB059C400247CB1 /* ContentView.swift in Sources */,
+				F3F870842AB8A99300EB0A3D /* AsyncImageView.swift in Sources */,
 				F30043172AB467EF00049397 /* NewsApiResponseModel.swift in Sources */,
+				F3F870872AB8A9C800EB0A3D /* ImageLoader.swift in Sources */,
 				F30043112AB4666700049397 /* ArticleRepository.swift in Sources */,
 				F30043142AB4674200049397 /* ArticleModel.swift in Sources */,
 				F3D9515D2AB059C400247CB1 /* newsApp.swift in Sources */,
@@ -647,6 +667,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		F3A699A52AB8A76C00544DEF /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -654,6 +682,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F30043182AB46E1E00049397 /* XCRemoteSwiftPackageReference "swift-dotenv" */;
 			productName = SwiftDotenv;
+		};
+		F3A699A62AB8A76C00544DEF /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3A699A52AB8A76C00544DEF /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
