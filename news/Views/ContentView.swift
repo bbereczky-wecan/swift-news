@@ -8,20 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    
 
     var body: some View {
-        NavigationView {
-            VStack {
-                NavigationLink(destination: LoginScreenView()) {
-                    HStack {
-                        Spacer()
-                        Text("Log in")
-                            .padding(.trailing, 30)
-                            .foregroundColor(.accentColor)
-                    }
+        ZStack {
+            NavigationView {
+                VStack {
+                    HeaderView()
+                    SearchScreenView(articlesRepository: .init())
                 }
-                SearchScreenView(articlesRepository: .init())
             }
+            LoadingView()
         }
     }
 }

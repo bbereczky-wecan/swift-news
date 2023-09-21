@@ -19,6 +19,8 @@
 		F32B9BD62ABC926600375D92 /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B9BD52ABC926600375D92 /* LoginScreenView.swift */; };
 		F32B9BD92ABCD00500375D92 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F32B9BD82ABCD00500375D92 /* Pacifico-Regular.ttf */; };
 		F32B9BDB2ABCD24600375D92 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B9BDA2ABCD24600375D92 /* Colors.swift */; };
+		F32B9BDD2ABCDA7F00375D92 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B9BDC2ABCDA7F00375D92 /* LoadingView.swift */; };
+		F32B9BDF2ABCDAD200375D92 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B9BDE2ABCDAD200375D92 /* HeaderView.swift */; };
 		F367DB6C2ABC488D00B4FEA6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F367DB6B2ABC488D00B4FEA6 /* .gitignore */; };
 		F367DB6D2ABC488D00B4FEA6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F367DB6B2ABC488D00B4FEA6 /* .gitignore */; };
 		F367DB6E2ABC488D00B4FEA6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F367DB6B2ABC488D00B4FEA6 /* .gitignore */; };
@@ -64,6 +66,8 @@
 		F32B9BD52ABC926600375D92 /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
 		F32B9BD82ABCD00500375D92 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		F32B9BDA2ABCD24600375D92 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		F32B9BDC2ABCDA7F00375D92 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		F32B9BDE2ABCDAD200375D92 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		F367DB6B2ABC488D00B4FEA6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F367DB6F2ABC4A5400B4FEA6 /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		F3CA66262AB08B8200A894A5 /* SearchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenView.swift; sourceTree = "<group>"; };
@@ -138,8 +142,8 @@
 		F32B9BD42ABC922B00375D92 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				F3CA66262AB08B8200A894A5 /* SearchScreenView.swift */,
-				F32B9BD52ABC926600375D92 /* LoginScreenView.swift */,
+				F32B9BE12ABCDB3D00375D92 /* LoginScreen */,
+				F32B9BE02ABCDAEF00375D92 /* SearchScreen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -152,14 +156,40 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		F32B9BE02ABCDAEF00375D92 /* SearchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F3CA66282AB08FE600A894A5 /* SearchListItem.swift */,
+				F3CA66262AB08B8200A894A5 /* SearchScreenView.swift */,
+			);
+			path = SearchScreen;
+			sourceTree = "<group>";
+		};
+		F32B9BE12ABCDB3D00375D92 /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F32B9BD22ABC90C400375D92 /* GoogleSignInButton.swift */,
+				F32B9BD52ABC926600375D92 /* LoginScreenView.swift */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		F32B9BE22ABCDB7000375D92 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F3F870832AB8A99300EB0A3D /* AsyncImageView.swift */,
+				F32B9BDC2ABCDA7F00375D92 /* LoadingView.swift */,
+				F32B9BDE2ABCDAD200375D92 /* HeaderView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		F3CA66252AB08B5C00A894A5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F32B9BE22ABCDB7000375D92 /* Components */,
 				F32B9BD42ABC922B00375D92 /* Screens */,
 				F3D9515E2AB059C400247CB1 /* ContentView.swift */,
-				F3CA66282AB08FE600A894A5 /* SearchListItem.swift */,
-				F3F870832AB8A99300EB0A3D /* AsyncImageView.swift */,
-				F32B9BD22ABC90C400375D92 /* GoogleSignInButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -388,10 +418,12 @@
 				F3CA66272AB08B8200A894A5 /* SearchScreenView.swift in Sources */,
 				F3D9515F2AB059C400247CB1 /* ContentView.swift in Sources */,
 				F32B9BD62ABC926600375D92 /* LoginScreenView.swift in Sources */,
+				F32B9BDD2ABCDA7F00375D92 /* LoadingView.swift in Sources */,
 				F3F870842AB8A99300EB0A3D /* AsyncImageView.swift in Sources */,
 				F30043172AB467EF00049397 /* NewsApiResponseModel.swift in Sources */,
 				F367DB702ABC4A5400B4FEA6 /* Env.swift in Sources */,
 				F32B9BDB2ABCD24600375D92 /* Colors.swift in Sources */,
+				F32B9BDF2ABCDAD200375D92 /* HeaderView.swift in Sources */,
 				F3F870872AB8A9C800EB0A3D /* ImageLoader.swift in Sources */,
 				F30043112AB4666700049397 /* ArticleRepository.swift in Sources */,
 				F30043142AB4674200049397 /* ArticleModel.swift in Sources */,
