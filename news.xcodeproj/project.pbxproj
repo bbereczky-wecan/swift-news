@@ -10,13 +10,11 @@
 		F30043112AB4666700049397 /* ArticleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30043102AB4666700049397 /* ArticleRepository.swift */; };
 		F30043142AB4674200049397 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30043132AB4674200049397 /* ArticleModel.swift */; };
 		F30043172AB467EF00049397 /* NewsApiResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30043162AB467EF00049397 /* NewsApiResponseModel.swift */; };
-		F300431A2AB46E1E00049397 /* SwiftDotenv in Frameworks */ = {isa = PBXBuildFile; productRef = F30043192AB46E1E00049397 /* SwiftDotenv */; };
 		F3064C8F2ABC378F0084A34E /* Environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3064C8E2ABC378F0084A34E /* Environment.plist */; };
 		F367DB6C2ABC488D00B4FEA6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F367DB6B2ABC488D00B4FEA6 /* .gitignore */; };
 		F367DB6D2ABC488D00B4FEA6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F367DB6B2ABC488D00B4FEA6 /* .gitignore */; };
 		F367DB6E2ABC488D00B4FEA6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F367DB6B2ABC488D00B4FEA6 /* .gitignore */; };
 		F367DB702ABC4A5400B4FEA6 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = F367DB6F2ABC4A5400B4FEA6 /* Env.swift */; };
-		F3A699A72AB8A76C00544DEF /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = F3A699A62AB8A76C00544DEF /* URLImage */; };
 		F3CA66272AB08B8200A894A5 /* SearchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA66262AB08B8200A894A5 /* SearchScreenView.swift */; };
 		F3CA66292AB08FE600A894A5 /* SearchListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA66282AB08FE600A894A5 /* SearchListItem.swift */; };
 		F3D9515D2AB059C400247CB1 /* newsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9515C2AB059C400247CB1 /* newsApp.swift */; };
@@ -75,8 +73,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3A699A72AB8A76C00544DEF /* URLImage in Frameworks */,
-				F300431A2AB46E1E00049397 /* SwiftDotenv in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,8 +216,6 @@
 			);
 			name = news;
 			packageProductDependencies = (
-				F30043192AB46E1E00049397 /* SwiftDotenv */,
-				F3A699A62AB8A76C00544DEF /* URLImage */,
 			);
 			productName = news;
 			productReference = F3D951592AB059C400247CB1 /* news.app */;
@@ -296,8 +290,6 @@
 			);
 			mainGroup = F3D951502AB059C400247CB1;
 			packageReferences = (
-				F30043182AB46E1E00049397 /* XCRemoteSwiftPackageReference "swift-dotenv" */,
-				F3A699A52AB8A76C00544DEF /* XCRemoteSwiftPackageReference "url-image" */,
 			);
 			productRefGroup = F3D9515A2AB059C400247CB1 /* Products */;
 			projectDirPath = "";
@@ -673,38 +665,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		F30043182AB46E1E00049397 /* XCRemoteSwiftPackageReference "swift-dotenv" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/thebarndog/swift-dotenv.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
-		F3A699A52AB8A76C00544DEF /* XCRemoteSwiftPackageReference "url-image" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		F30043192AB46E1E00049397 /* SwiftDotenv */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F30043182AB46E1E00049397 /* XCRemoteSwiftPackageReference "swift-dotenv" */;
-			productName = SwiftDotenv;
-		};
-		F3A699A62AB8A76C00544DEF /* URLImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F3A699A52AB8A76C00544DEF /* XCRemoteSwiftPackageReference "url-image" */;
-			productName = URLImage;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F3D951512AB059C400247CB1 /* Project object */;
 }
