@@ -11,6 +11,7 @@
 		F30043142AB4674200049397 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30043132AB4674200049397 /* ArticleModel.swift */; };
 		F30043172AB467EF00049397 /* NewsApiResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30043162AB467EF00049397 /* NewsApiResponseModel.swift */; };
 		F3064C8F2ABC378F0084A34E /* Environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3064C8E2ABC378F0084A34E /* Environment.plist */; };
+		F32B9BC62ABC8A4400375D92 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F32B9BC52ABC8A4400375D92 /* GoogleService-Info.plist */; };
 		F367DB6C2ABC488D00B4FEA6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F367DB6B2ABC488D00B4FEA6 /* .gitignore */; };
 		F367DB6D2ABC488D00B4FEA6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F367DB6B2ABC488D00B4FEA6 /* .gitignore */; };
 		F367DB6E2ABC488D00B4FEA6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F367DB6B2ABC488D00B4FEA6 /* .gitignore */; };
@@ -50,6 +51,7 @@
 		F30043132AB4674200049397 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		F30043162AB467EF00049397 /* NewsApiResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApiResponseModel.swift; sourceTree = "<group>"; };
 		F3064C8E2ABC378F0084A34E /* Environment.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Environment.plist; sourceTree = "<group>"; };
+		F32B9BC52ABC8A4400375D92 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F367DB6B2ABC488D00B4FEA6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F367DB6F2ABC4A5400B4FEA6 /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		F3CA66262AB08B8200A894A5 /* SearchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenView.swift; sourceTree = "<group>"; };
@@ -131,7 +133,6 @@
 		F3D951502AB059C400247CB1 = {
 			isa = PBXGroup;
 			children = (
-				F367DB6B2ABC488D00B4FEA6 /* .gitignore */,
 				F3D9515B2AB059C400247CB1 /* news */,
 				F3D9516C2AB059C500247CB1 /* newsTests */,
 				F3D951762AB059C500247CB1 /* newsUITests */,
@@ -162,6 +163,8 @@
 				F3D951602AB059C500247CB1 /* Assets.xcassets */,
 				F3D951622AB059C500247CB1 /* Preview Content */,
 				F3064C8E2ABC378F0084A34E /* Environment.plist */,
+				F32B9BC52ABC8A4400375D92 /* GoogleService-Info.plist */,
+				F367DB6B2ABC488D00B4FEA6 /* .gitignore */,
 			);
 			path = news;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			files = (
 				F367DB6C2ABC488D00B4FEA6 /* .gitignore in Resources */,
 				F3D951642AB059C500247CB1 /* Preview Assets.xcassets in Resources */,
+				F32B9BC62ABC8A4400375D92 /* GoogleService-Info.plist in Resources */,
 				F3064C8F2ABC378F0084A34E /* Environment.plist in Resources */,
 				F3D951612AB059C500247CB1 /* Assets.xcassets in Resources */,
 			);
