@@ -24,17 +24,17 @@ struct SearchScreenView: View {
             Form {
                 HStack {
                     TextField("Search", text: $searchText)
-                    .padding(10)
-                    .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
-                    .submitLabel(.search)
+                        .padding(10)
+                        .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
+                        .submitLabel(.search)
                     Button(action: submit) {
-                        Text("Search").padding(10).background(.blue).fontWeight(.bold).foregroundColor(.white).clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                        Text("Search").padding(10).background(Color.accentPink).fontWeight(.bold).foregroundColor(.white).clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                     }
-              }
+                }
             }.frame(height: 120).padding(.bottom, -10)
             if let articles = articlesRepository.articles {
                 List(articles, id: \.id) { article in SearchListItem(article: article)}
-
+                
             }
             Spacer()
         }

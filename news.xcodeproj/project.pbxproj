@@ -15,6 +15,10 @@
 		F32B9BCC2ABC8C0900375D92 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = F32B9BCB2ABC8C0900375D92 /* GoogleSignIn */; };
 		F32B9BCE2ABC8C0900375D92 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F32B9BCD2ABC8C0900375D92 /* GoogleSignInSwift */; };
 		F32B9BD02ABC8C6C00375D92 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F32B9BCF2ABC8C6C00375D92 /* GoogleService-Info.plist */; };
+		F32B9BD32ABC90C400375D92 /* GoogleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B9BD22ABC90C400375D92 /* GoogleSignInButton.swift */; };
+		F32B9BD62ABC926600375D92 /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B9BD52ABC926600375D92 /* LoginScreenView.swift */; };
+		F32B9BD92ABCD00500375D92 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F32B9BD82ABCD00500375D92 /* Pacifico-Regular.ttf */; };
+		F32B9BDB2ABCD24600375D92 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B9BDA2ABCD24600375D92 /* Colors.swift */; };
 		F367DB6C2ABC488D00B4FEA6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F367DB6B2ABC488D00B4FEA6 /* .gitignore */; };
 		F367DB6D2ABC488D00B4FEA6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F367DB6B2ABC488D00B4FEA6 /* .gitignore */; };
 		F367DB6E2ABC488D00B4FEA6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F367DB6B2ABC488D00B4FEA6 /* .gitignore */; };
@@ -55,6 +59,11 @@
 		F30043162AB467EF00049397 /* NewsApiResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApiResponseModel.swift; sourceTree = "<group>"; };
 		F3064C8E2ABC378F0084A34E /* Environment.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Environment.plist; sourceTree = "<group>"; };
 		F32B9BCF2ABC8C6C00375D92 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F32B9BD12ABC8D1000375D92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F32B9BD22ABC90C400375D92 /* GoogleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInButton.swift; sourceTree = "<group>"; };
+		F32B9BD52ABC926600375D92 /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
+		F32B9BD82ABCD00500375D92 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
+		F32B9BDA2ABCD24600375D92 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F367DB6B2ABC488D00B4FEA6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F367DB6F2ABC4A5400B4FEA6 /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		F3CA66262AB08B8200A894A5 /* SearchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenView.swift; sourceTree = "<group>"; };
@@ -121,17 +130,36 @@
 		F300431B2AB46EA400049397 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				F32B9BDA2ABCD24600375D92 /* Colors.swift */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		F32B9BD42ABC922B00375D92 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F3CA66262AB08B8200A894A5 /* SearchScreenView.swift */,
+				F32B9BD52ABC926600375D92 /* LoginScreenView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		F32B9BD72ABCCFF000375D92 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F32B9BD82ABCD00500375D92 /* Pacifico-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		F3CA66252AB08B5C00A894A5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F32B9BD42ABC922B00375D92 /* Screens */,
 				F3D9515E2AB059C400247CB1 /* ContentView.swift */,
-				F3CA66262AB08B8200A894A5 /* SearchScreenView.swift */,
 				F3CA66282AB08FE600A894A5 /* SearchListItem.swift */,
 				F3F870832AB8A99300EB0A3D /* AsyncImageView.swift */,
+				F32B9BD22ABC90C400375D92 /* GoogleSignInButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -159,6 +187,8 @@
 		F3D9515B2AB059C400247CB1 /* news */ = {
 			isa = PBXGroup;
 			children = (
+				F32B9BD72ABCCFF000375D92 /* Fonts */,
+				F32B9BD12ABC8D1000375D92 /* Info.plist */,
 				F367DB6F2ABC4A5400B4FEA6 /* Env.swift */,
 				F3F870852AB8A9BA00EB0A3D /* Handlers */,
 				F300431B2AB46EA400049397 /* Config */,
@@ -324,6 +354,7 @@
 				F367DB6C2ABC488D00B4FEA6 /* .gitignore in Resources */,
 				F3D951642AB059C500247CB1 /* Preview Assets.xcassets in Resources */,
 				F3064C8F2ABC378F0084A34E /* Environment.plist in Resources */,
+				F32B9BD92ABCD00500375D92 /* Pacifico-Regular.ttf in Resources */,
 				F3D951612AB059C500247CB1 /* Assets.xcassets in Resources */,
 				F32B9BD02ABC8C6C00375D92 /* GoogleService-Info.plist in Resources */,
 			);
@@ -352,12 +383,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F32B9BD32ABC90C400375D92 /* GoogleSignInButton.swift in Sources */,
 				F3CA66292AB08FE600A894A5 /* SearchListItem.swift in Sources */,
 				F3CA66272AB08B8200A894A5 /* SearchScreenView.swift in Sources */,
 				F3D9515F2AB059C400247CB1 /* ContentView.swift in Sources */,
+				F32B9BD62ABC926600375D92 /* LoginScreenView.swift in Sources */,
 				F3F870842AB8A99300EB0A3D /* AsyncImageView.swift in Sources */,
 				F30043172AB467EF00049397 /* NewsApiResponseModel.swift in Sources */,
 				F367DB702ABC4A5400B4FEA6 /* Env.swift in Sources */,
+				F32B9BDB2ABCD24600375D92 /* Colors.swift in Sources */,
 				F3F870872AB8A9C800EB0A3D /* ImageLoader.swift in Sources */,
 				F30043112AB4666700049397 /* ArticleRepository.swift in Sources */,
 				F30043142AB4674200049397 /* ArticleModel.swift in Sources */,
@@ -522,6 +556,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"news/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = news/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -550,6 +585,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"news/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = news/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
