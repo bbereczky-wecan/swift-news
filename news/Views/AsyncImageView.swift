@@ -10,7 +10,7 @@ struct AsyncImageView: View {
     
     var body: some View {
         Group {
-            if let imageURL = URL(string: src) {
+            if URL(string: src) != nil {
                 if let image = imageLoader.image {
                     Image(uiImage: image)
                         .resizable()
@@ -19,7 +19,7 @@ struct AsyncImageView: View {
                     ProgressView() // or a placeholder image
                 }
             } else {
-                Text("Invalid URL")
+                Text("Invalid image URL")
                     .foregroundColor(.red)
             }
         }

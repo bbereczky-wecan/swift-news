@@ -12,16 +12,16 @@ struct SearchListItem: View {
     var article: Article
 
     var body: some View {
-        Link(destination: URL(string: article.url ?? "")!) {
+        Link(destination: URL(string: article.url)!) {
             VStack {
-                AsyncImageView(src: article.urlToImage ?? "").scaledToFit()
+                AsyncImageView(src: article.urlToImage).scaledToFit()
                 VStack(alignment: .leading, spacing: 10) {
                     HStack {
-                        Text(article.title ?? "")
+                        Text(article.title)
                             .font(.headline).foregroundColor(.black)
                         Spacer()
                     }
-                    Text(article.description ?? "")
+                    Text(article.description)
                         .font(.subheadline).foregroundColor(.gray)
                 }
             }

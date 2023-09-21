@@ -13,7 +13,8 @@ final class ArticleRepository: ObservableObject {
     @Published var articles: [Article]?
     
     func findAll() {
-        let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=cb51980d1c314897876a792646c59c10")!
+        let url = URL(string: "\(ENV.API_URL)/top-headlines?country=us&apiKey=\(ENV.API_KEY)")!
+        print(url)
         cancellable = URLSession.shared.dataTaskPublisher(for: url)
             .map(\.data)
             .decode(type: NewsApiResponse.self, decoder: JSONDecoder())
@@ -32,7 +33,7 @@ final class ArticleRepository: ObservableObject {
     
     func findByTitle(title: String) {
         if (!title.isEmpty) {
-            let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=cb51980d1c314897876a792646c59c10&q=\(title)")!
+            let url = URL(string: "\(ENV.API_URL)/top-headlines?country=us&apiKey=\(ENV.API_KEY)&q=\(title)")!
             
             cancellable = URLSession.shared.dataTaskPublisher(for: url)
                 .map(\.data)
