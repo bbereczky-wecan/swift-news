@@ -61,7 +61,7 @@
 		F30043162AB467EF00049397 /* NewsApiResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApiResponseModel.swift; sourceTree = "<group>"; };
 		F3064C8E2ABC378F0084A34E /* Environment.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Environment.plist; sourceTree = "<group>"; };
 		F32B9BCF2ABC8C6C00375D92 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		F32B9BD12ABC8D1000375D92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F32B9BD12ABC8D1000375D92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F32B9BD22ABC90C400375D92 /* GoogleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInButton.swift; sourceTree = "<group>"; };
 		F32B9BD52ABC926600375D92 /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
 		F32B9BD82ABCD00500375D92 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
@@ -134,6 +134,7 @@
 		F300431B2AB46EA400049397 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				F367DB6F2ABC4A5400B4FEA6 /* Env.swift */,
 				F32B9BDA2ABCD24600375D92 /* Colors.swift */,
 			);
 			path = Config;
@@ -218,8 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				F32B9BD72ABCCFF000375D92 /* Fonts */,
-				F32B9BD12ABC8D1000375D92 /* Info.plist */,
-				F367DB6F2ABC4A5400B4FEA6 /* Env.swift */,
 				F3F870852AB8A9BA00EB0A3D /* Handlers */,
 				F300431B2AB46EA400049397 /* Config */,
 				F30043152AB4675000049397 /* Models */,
@@ -229,6 +228,7 @@
 				F3D951602AB059C500247CB1 /* Assets.xcassets */,
 				F3D951622AB059C500247CB1 /* Preview Content */,
 				F3064C8E2ABC378F0084A34E /* Environment.plist */,
+				F32B9BD12ABC8D1000375D92 /* Info.plist */,
 				F32B9BCF2ABC8C6C00375D92 /* GoogleService-Info.plist */,
 				F367DB6B2ABC488D00B4FEA6 /* .gitignore */,
 			);

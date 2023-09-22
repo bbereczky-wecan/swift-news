@@ -14,7 +14,6 @@ final class ArticleRepository: ObservableObject {
     
     func findAll() {
         let url = URL(string: "\(ENV.API_URL)/top-headlines?country=us&apiKey=\(ENV.API_KEY)")!
-        print(url)
         cancellable = URLSession.shared.dataTaskPublisher(for: url)
             .map(\.data)
             .decode(type: NewsApiResponse.self, decoder: JSONDecoder())
