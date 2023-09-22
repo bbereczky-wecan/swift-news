@@ -10,6 +10,8 @@ import GoogleSignIn
 import Firebase
 
 class GoogleSignInHandler {
+    
+    @MainActor
     func signIn() {
         guard let clientID = FirebaseApp.app()?.options.clientID else { return }
 
@@ -41,6 +43,8 @@ class GoogleSignInHandler {
             store.auth.setImageURL(imageURL ?? "")
             store.auth.setAccessToken(user.accessToken.tokenString)
             store.auth.setIdToken(user.idToken?.tokenString ?? "")
+            print("store auth set to true")
+            print(store.auth.authorized)
             
         }
     }

@@ -25,7 +25,7 @@ struct SearchScreenView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            SearchFormView().frame(height: 110)
+            SearchFormView().frame(height: 120)
             List(self.store.articles, id: \.id) { article in SearchListItem(article: article)
             }
 

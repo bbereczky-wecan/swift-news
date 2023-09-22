@@ -6,12 +6,23 @@
 //
 
 import Foundation
+import Combine
 
 class Store: ObservableObject {
     static let instance = Store()
     @Published var isLoading = false
     @Published var articles: [Article] = []
-    @Published var auth: Auth = Auth()
+    var auth: Auth = Auth()
+    
+    private var cancellables: Set<AnyCancellable> = []
+
+    init() {
+        auth.objectWillChange
+            .sink { [weak self] _ in
+                self?.objectWillChange.send()
+            }
+            .store(in: &cancellables)
+    }
 }
 
 let store = Store.instance
