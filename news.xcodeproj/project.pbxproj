@@ -21,6 +21,8 @@
 		F32B9BDB2ABCD24600375D92 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B9BDA2ABCD24600375D92 /* Colors.swift */; };
 		F32B9BDD2ABCDA7F00375D92 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B9BDC2ABCDA7F00375D92 /* LoadingView.swift */; };
 		F32B9BDF2ABCDAD200375D92 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B9BDE2ABCDAD200375D92 /* HeaderView.swift */; };
+		F32B9BE52ABD738100375D92 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B9BE42ABD738100375D92 /* Store.swift */; };
+		F32B9BE82ABD76D900375D92 /* Loading.acions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B9BE72ABD76D900375D92 /* Loading.acions.swift */; };
 		F367DB6C2ABC488D00B4FEA6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F367DB6B2ABC488D00B4FEA6 /* .gitignore */; };
 		F367DB6D2ABC488D00B4FEA6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F367DB6B2ABC488D00B4FEA6 /* .gitignore */; };
 		F367DB6E2ABC488D00B4FEA6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F367DB6B2ABC488D00B4FEA6 /* .gitignore */; };
@@ -68,6 +70,8 @@
 		F32B9BDA2ABCD24600375D92 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F32B9BDC2ABCDA7F00375D92 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		F32B9BDE2ABCDAD200375D92 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		F32B9BE42ABD738100375D92 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		F32B9BE72ABD76D900375D92 /* Loading.acions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.acions.swift; sourceTree = "<group>"; };
 		F367DB6B2ABC488D00B4FEA6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F367DB6F2ABC4A5400B4FEA6 /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		F3CA66262AB08B8200A894A5 /* SearchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenView.swift; sourceTree = "<group>"; };
@@ -185,6 +189,23 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		F32B9BE32ABD737200375D92 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				F32B9BE62ABD76CB00375D92 /* Actions */,
+				F32B9BE42ABD738100375D92 /* Store.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		F32B9BE62ABD76CB00375D92 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				F32B9BE72ABD76D900375D92 /* Loading.acions.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
 		F3CA66252AB08B5C00A894A5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +239,7 @@
 		F3D9515B2AB059C400247CB1 /* news */ = {
 			isa = PBXGroup;
 			children = (
+				F32B9BE32ABD737200375D92 /* Store */,
 				F32B9BD72ABCCFF000375D92 /* Fonts */,
 				F3F870852AB8A9BA00EB0A3D /* Handlers */,
 				F300431B2AB46EA400049397 /* Config */,
@@ -415,7 +437,9 @@
 			files = (
 				F32B9BD32ABC90C400375D92 /* GoogleSignInButton.swift in Sources */,
 				F3CA66292AB08FE600A894A5 /* SearchListItem.swift in Sources */,
+				F32B9BE82ABD76D900375D92 /* Loading.acions.swift in Sources */,
 				F3CA66272AB08B8200A894A5 /* SearchScreenView.swift in Sources */,
+				F32B9BE52ABD738100375D92 /* Store.swift in Sources */,
 				F3D9515F2AB059C400247CB1 /* ContentView.swift in Sources */,
 				F32B9BD62ABC926600375D92 /* LoginScreenView.swift in Sources */,
 				F32B9BDD2ABCDA7F00375D92 /* LoadingView.swift in Sources */,

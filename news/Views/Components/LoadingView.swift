@@ -8,19 +8,25 @@
 import SwiftUI
 
 struct LoadingView: View {
-    private var isLoading = false
+    @EnvironmentObject var store: Store
 
     var body: some View {
-        if isLoading { ProgressView("Loading")
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-                .background(Color.white)
-                .ignoresSafeArea()
+        Group {
+            if store.isLoading { ProgressView("Loading")
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                    .background(Color.white)
+                    .ignoresSafeArea()
+            } else {
+                EmptyView()
+            }
         }
     }
 }
 
 struct LoadingView_Previews: PreviewProvider {
     static var previews: some View {
-        LoadingView()
+        store.startLoading()
+        return LoadingView()
+            .environmentObject(store)
     }
 }
