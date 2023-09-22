@@ -11,6 +11,7 @@ class Store: ObservableObject {
     static let instance = Store()
     @Published var isLoading = false
     @Published var articles: [Article] = []
+    @Published var auth: Auth = Auth()
 }
 
 let store = Store.instance

@@ -33,14 +33,15 @@ class GoogleSignInHandler {
 
             let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: user.accessToken.tokenString)
             
-            print(credential)
-            print(user.idToken?.tokenString)
-            
-            print(user.profile?.name)
-            print(user.profile?.email)
-            let photoURL = user.profile?.imageURL(withDimension: 100)
+            let imageURL = user.profile?.imageURL(withDimension: 100)?.absoluteString
 
-            print(photoURL)
+            store.auth.setAuthorized(true)
+            store.auth.setName(user.profile?.name ?? "")
+            store.auth.setEmail(user.profile?.email ?? "")
+            store.auth.setImageURL(imageURL ?? "")
+            store.auth.setAccessToken(user.accessToken.tokenString)
+            store.auth.setIdToken(user.idToken?.tokenString ?? "")
+            
         }
     }
 }

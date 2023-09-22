@@ -26,6 +26,7 @@
 		F32B9BEB2ABD807500375D92 /* GoogleSignInHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B9BEA2ABD807500375D92 /* GoogleSignInHandler.swift */; };
 		F32B9BED2ABD8FE600375D92 /* Article.actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B9BEC2ABD8FE600375D92 /* Article.actions.swift */; };
 		F32B9BEF2ABD9E8E00375D92 /* SearchFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B9BEE2ABD9E8E00375D92 /* SearchFormView.swift */; };
+		F32B9BF52ABDAF7400375D92 /* Auth.slice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B9BF42ABDAF7400375D92 /* Auth.slice.swift */; };
 		F367DB6C2ABC488D00B4FEA6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F367DB6B2ABC488D00B4FEA6 /* .gitignore */; };
 		F367DB6D2ABC488D00B4FEA6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F367DB6B2ABC488D00B4FEA6 /* .gitignore */; };
 		F367DB6E2ABC488D00B4FEA6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F367DB6B2ABC488D00B4FEA6 /* .gitignore */; };
@@ -78,6 +79,7 @@
 		F32B9BEA2ABD807500375D92 /* GoogleSignInHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInHandler.swift; sourceTree = "<group>"; };
 		F32B9BEC2ABD8FE600375D92 /* Article.actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.actions.swift; sourceTree = "<group>"; };
 		F32B9BEE2ABD9E8E00375D92 /* SearchFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormView.swift; sourceTree = "<group>"; };
+		F32B9BF42ABDAF7400375D92 /* Auth.slice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.slice.swift; sourceTree = "<group>"; };
 		F367DB6B2ABC488D00B4FEA6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F367DB6F2ABC4A5400B4FEA6 /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		F3CA66262AB08B8200A894A5 /* SearchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenView.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 		F32B9BE32ABD737200375D92 /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				F32B9BF32ABDAF5E00375D92 /* Slices */,
 				F32B9BE62ABD76CB00375D92 /* Actions */,
 				F32B9BE42ABD738100375D92 /* Store.swift */,
 			);
@@ -222,6 +225,14 @@
 				F32B9BEA2ABD807500375D92 /* GoogleSignInHandler.swift */,
 			);
 			path = Handlers;
+			sourceTree = "<group>";
+		};
+		F32B9BF32ABDAF5E00375D92 /* Slices */ = {
+			isa = PBXGroup;
+			children = (
+				F32B9BF42ABDAF7400375D92 /* Auth.slice.swift */,
+			);
+			path = Slices;
 			sourceTree = "<group>";
 		};
 		F3CA66252AB08B5C00A894A5 /* Views */ = {
@@ -465,6 +476,7 @@
 				F3F870842AB8A99300EB0A3D /* AsyncImageView.swift in Sources */,
 				F32B9BEB2ABD807500375D92 /* GoogleSignInHandler.swift in Sources */,
 				F30043172AB467EF00049397 /* NewsApiResponseModel.swift in Sources */,
+				F32B9BF52ABDAF7400375D92 /* Auth.slice.swift in Sources */,
 				F367DB702ABC4A5400B4FEA6 /* Env.swift in Sources */,
 				F32B9BDB2ABCD24600375D92 /* Colors.swift in Sources */,
 				F32B9BDF2ABCDAD200375D92 /* HeaderView.swift in Sources */,
