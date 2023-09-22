@@ -12,7 +12,7 @@ struct LoadingView: View {
 
     var body: some View {
         Group {
-            if store.isLoading { ProgressView("Loading")
+            if self.store.isLoading { ProgressView("Loading")
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                     .background(Color.white)
                     .ignoresSafeArea()

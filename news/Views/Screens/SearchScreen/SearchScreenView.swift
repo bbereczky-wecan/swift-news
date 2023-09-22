@@ -8,14 +8,8 @@
 import SwiftUI
 
 struct SearchScreenView: View {
-    @ObservedObject var articlesRepository: ArticleRepository
-    
-    init(articlesRepository: ArticleRepository) {
-        self.articlesRepository = articlesRepository
-        Task {
-            articlesRepository.findAll()
-        }
-    }
+    @EnvironmentObject var store: Store
+    private var articlesRepository = ArticleRepository()
     
     @State private var searchText: String = ""
 
@@ -32,13 +26,17 @@ struct SearchScreenView: View {
                     }
                 }
             }.frame(height: 120).padding(.bottom, -10)
-            if let articles = articlesRepository.articles {
-                List(articles, id: \.id) { article in SearchListItem(article: article)}
-                
-            }
+            List(self.store.articles, id: \.id) { article in SearchListItem(article: article)}
+            
+        
             Spacer()
+        }.onAppear {
+            Task {
+                articlesRepository.findAll()
+            }
         }
     }
+
     
     func submit() {
         Task {
@@ -49,6 +47,6 @@ struct SearchScreenView: View {
 
 struct SearchListView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchScreenView(articlesRepository: .init())
+        SearchScreenView().environmentObject(store)
     }
 }

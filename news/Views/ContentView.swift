@@ -15,7 +15,7 @@ struct ContentView: View {
             NavigationView {
                 VStack {
                     HeaderView()
-                    SearchScreenView(articlesRepository: .init())
+                    SearchScreenView()
                 }
             }
             LoadingView()

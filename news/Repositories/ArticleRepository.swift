@@ -10,8 +10,8 @@ import Combine
 
 final class ArticleRepository: ObservableObject {
     private var cancellable: AnyCancellable?
-    @Published var articles: [Article]?
     
+    @MainActor
     func findAll() {
         store.startLoading()
         let url = URL(string: "\(ENV.API_URL)/top-headlines?country=us&apiKey=\(ENV.API_KEY)")!
@@ -28,10 +28,11 @@ final class ArticleRepository: ObservableObject {
                         print("Error: \(error)")
                 }
             }, receiveValue: { [weak self] response in
-                self?.articles = response.articles
+                store.setArticles(response.articles)
             })
     }
     
+    @MainActor
     func findByTitle(title: String) {
         store.startLoading()
         if (!title.isEmpty) {
@@ -50,7 +51,7 @@ final class ArticleRepository: ObservableObject {
                             print("Error: \(error)")
                     }
                 }, receiveValue: { [weak self] response in
-                    self?.articles = response.articles
+                    store.setArticles(response.articles)
                 })
         } else {
             findAll()

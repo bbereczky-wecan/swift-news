@@ -10,6 +10,7 @@ import Foundation
 class Store: ObservableObject {
     static let instance = Store()
     @Published var isLoading = false
+    @Published var articles: [Article] = []
 }
 
 let store = Store.instance
