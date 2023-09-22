@@ -25,6 +25,7 @@
 		F32B9BE82ABD76D900375D92 /* Loading.acions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B9BE72ABD76D900375D92 /* Loading.acions.swift */; };
 		F32B9BEB2ABD807500375D92 /* GoogleSignInHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B9BEA2ABD807500375D92 /* GoogleSignInHandler.swift */; };
 		F32B9BED2ABD8FE600375D92 /* Article.actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B9BEC2ABD8FE600375D92 /* Article.actions.swift */; };
+		F32B9BEF2ABD9E8E00375D92 /* SearchFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B9BEE2ABD9E8E00375D92 /* SearchFormView.swift */; };
 		F367DB6C2ABC488D00B4FEA6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F367DB6B2ABC488D00B4FEA6 /* .gitignore */; };
 		F367DB6D2ABC488D00B4FEA6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F367DB6B2ABC488D00B4FEA6 /* .gitignore */; };
 		F367DB6E2ABC488D00B4FEA6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F367DB6B2ABC488D00B4FEA6 /* .gitignore */; };
@@ -76,6 +77,7 @@
 		F32B9BE72ABD76D900375D92 /* Loading.acions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.acions.swift; sourceTree = "<group>"; };
 		F32B9BEA2ABD807500375D92 /* GoogleSignInHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInHandler.swift; sourceTree = "<group>"; };
 		F32B9BEC2ABD8FE600375D92 /* Article.actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.actions.swift; sourceTree = "<group>"; };
+		F32B9BEE2ABD9E8E00375D92 /* SearchFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormView.swift; sourceTree = "<group>"; };
 		F367DB6B2ABC488D00B4FEA6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F367DB6F2ABC4A5400B4FEA6 /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		F3CA66262AB08B8200A894A5 /* SearchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenView.swift; sourceTree = "<group>"; };
@@ -168,8 +170,10 @@
 		F32B9BE02ABCDAEF00375D92 /* SearchScreen */ = {
 			isa = PBXGroup;
 			children = (
+				F300430F2AB4664300049397 /* Repositories */,
 				F3CA66282AB08FE600A894A5 /* SearchListItem.swift */,
 				F3CA66262AB08B8200A894A5 /* SearchScreenView.swift */,
+				F32B9BEE2ABD9E8E00375D92 /* SearchFormView.swift */,
 			);
 			path = SearchScreen;
 			sourceTree = "<group>";
@@ -258,7 +262,6 @@
 				F3F870852AB8A9BA00EB0A3D /* Handlers */,
 				F300431B2AB46EA400049397 /* Config */,
 				F30043152AB4675000049397 /* Models */,
-				F300430F2AB4664300049397 /* Repositories */,
 				F3CA66252AB08B5C00A894A5 /* Views */,
 				F3D9515C2AB059C400247CB1 /* newsApp.swift */,
 				F3D951602AB059C500247CB1 /* Assets.xcassets */,
@@ -457,6 +460,7 @@
 				F3D9515F2AB059C400247CB1 /* ContentView.swift in Sources */,
 				F32B9BED2ABD8FE600375D92 /* Article.actions.swift in Sources */,
 				F32B9BD62ABC926600375D92 /* LoginScreenView.swift in Sources */,
+				F32B9BEF2ABD9E8E00375D92 /* SearchFormView.swift in Sources */,
 				F32B9BDD2ABCDA7F00375D92 /* LoadingView.swift in Sources */,
 				F3F870842AB8A99300EB0A3D /* AsyncImageView.swift in Sources */,
 				F32B9BEB2ABD807500375D92 /* GoogleSignInHandler.swift in Sources */,
