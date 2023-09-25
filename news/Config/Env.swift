@@ -24,9 +24,21 @@ class BaseENV {
 protocol APIKeyable {
     var API_KEY: String { get }
     var API_URL: String { get }
+    var ALGOLIA_APP_ID: String { get }
+    var ALGOLIA_API_KEY: String { get }
+    var ALGOLIA_INDEX_NAME: String { get }
 }
 
 class EnvironmentClass: BaseENV, APIKeyable {
+    var ALGOLIA_APP_ID: String {
+        dict.object(forKey: "ALGOLIA_APP_ID") as? String ?? ""
+    }
+    var ALGOLIA_API_KEY: String {
+        dict.object(forKey: "ALGOLIA_API_KEY") as? String ?? ""
+    }
+    var ALGOLIA_INDEX_NAME: String {
+        dict.object(forKey: "ALGOLIA_INDEX_NAME") as? String ?? ""
+    }
     var API_KEY: String {
         dict.object(forKey: "API_KEY") as? String ?? ""
     }

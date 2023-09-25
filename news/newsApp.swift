@@ -9,6 +9,7 @@ import SwiftUI
 import FirebaseCore
 import FirebaseAuth
 import GoogleSignIn
+import AlgoliaSearchClient
 
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,

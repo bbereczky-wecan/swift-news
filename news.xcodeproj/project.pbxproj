@@ -11,6 +11,10 @@
 		F30043142AB4674200049397 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30043132AB4674200049397 /* ArticleModel.swift */; };
 		F30043172AB467EF00049397 /* NewsApiResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30043162AB467EF00049397 /* NewsApiResponseModel.swift */; };
 		F3064C8F2ABC378F0084A34E /* Environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3064C8E2ABC378F0084A34E /* Environment.plist */; };
+		F32539092AC1AD26000FF78F /* AlgoliaSearchClient in Frameworks */ = {isa = PBXBuildFile; productRef = F32539082AC1AD26000FF78F /* AlgoliaSearchClient */; };
+		F325390B2AC1B6A4000FF78F /* AlgoliaArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F325390A2AC1B6A4000FF78F /* AlgoliaArticleModel.swift */; };
+		F325390D2AC1B6C0000FF78F /* AlgoliaSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F325390C2AC1B6C0000FF78F /* AlgoliaSearchRepository.swift */; };
+		F325390F2AC1BEAB000FF78F /* Algolia.swift in Sources */ = {isa = PBXBuildFile; fileRef = F325390E2AC1BEAB000FF78F /* Algolia.swift */; };
 		F32B9BC92ABC8B2700375D92 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F32B9BC82ABC8B2700375D92 /* FirebaseAuth */; };
 		F32B9BCC2ABC8C0900375D92 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = F32B9BCB2ABC8C0900375D92 /* GoogleSignIn */; };
 		F32B9BCE2ABC8C0900375D92 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F32B9BCD2ABC8C0900375D92 /* GoogleSignInSwift */; };
@@ -68,6 +72,9 @@
 		F30043132AB4674200049397 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		F30043162AB467EF00049397 /* NewsApiResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApiResponseModel.swift; sourceTree = "<group>"; };
 		F3064C8E2ABC378F0084A34E /* Environment.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Environment.plist; sourceTree = "<group>"; };
+		F325390A2AC1B6A4000FF78F /* AlgoliaArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoliaArticleModel.swift; sourceTree = "<group>"; };
+		F325390C2AC1B6C0000FF78F /* AlgoliaSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoliaSearchRepository.swift; sourceTree = "<group>"; };
+		F325390E2AC1BEAB000FF78F /* Algolia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algolia.swift; sourceTree = "<group>"; };
 		F32B9BCF2ABC8C6C00375D92 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F32B9BD12ABC8D1000375D92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F32B9BD22ABC90C400375D92 /* GoogleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInButton.swift; sourceTree = "<group>"; };
@@ -108,6 +115,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F32B9BCE2ABC8C0900375D92 /* GoogleSignInSwift in Frameworks */,
+				F32539092AC1AD26000FF78F /* AlgoliaSearchClient in Frameworks */,
 				F32B9BC92ABC8B2700375D92 /* FirebaseAuth in Frameworks */,
 				F32B9BCC2ABC8C0900375D92 /* GoogleSignIn in Frameworks */,
 			);
@@ -134,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				F30043102AB4666700049397 /* ArticleRepository.swift */,
+				F325390C2AC1B6C0000FF78F /* AlgoliaSearchRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -143,6 +152,7 @@
 			children = (
 				F30043132AB4674200049397 /* ArticleModel.swift */,
 				F30043162AB467EF00049397 /* NewsApiResponseModel.swift */,
+				F325390A2AC1B6A4000FF78F /* AlgoliaArticleModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -152,6 +162,7 @@
 			children = (
 				F367DB6F2ABC4A5400B4FEA6 /* Env.swift */,
 				F32B9BDA2ABCD24600375D92 /* Colors.swift */,
+				F325390E2AC1BEAB000FF78F /* Algolia.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -344,6 +355,7 @@
 				F32B9BC82ABC8B2700375D92 /* FirebaseAuth */,
 				F32B9BCB2ABC8C0900375D92 /* GoogleSignIn */,
 				F32B9BCD2ABC8C0900375D92 /* GoogleSignInSwift */,
+				F32539082AC1AD26000FF78F /* AlgoliaSearchClient */,
 			);
 			productName = news;
 			productReference = F3D951592AB059C400247CB1 /* news.app */;
@@ -420,6 +432,7 @@
 			packageReferences = (
 				F32B9BC72ABC8B2700375D92 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				F32B9BCA2ABC8C0900375D92 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				F32539072AC1AD26000FF78F /* XCRemoteSwiftPackageReference "algoliasearch-client-swift" */,
 			);
 			productRefGroup = F3D9515A2AB059C400247CB1 /* Products */;
 			projectDirPath = "";
@@ -472,7 +485,9 @@
 				F32B9BD32ABC90C400375D92 /* GoogleSignInButton.swift in Sources */,
 				F3CA66292AB08FE600A894A5 /* SearchListItem.swift in Sources */,
 				F32B9BE82ABD76D900375D92 /* Loading.acions.swift in Sources */,
+				F325390F2AC1BEAB000FF78F /* Algolia.swift in Sources */,
 				F3CA66272AB08B8200A894A5 /* SearchScreenView.swift in Sources */,
+				F325390D2AC1B6C0000FF78F /* AlgoliaSearchRepository.swift in Sources */,
 				F32B9BE52ABD738100375D92 /* Store.swift in Sources */,
 				F3D9515F2AB059C400247CB1 /* ContentView.swift in Sources */,
 				F32B9BED2ABD8FE600375D92 /* Article.actions.swift in Sources */,
@@ -487,6 +502,7 @@
 				F32B9BF52ABDAF7400375D92 /* Auth.slice.swift in Sources */,
 				F367DB702ABC4A5400B4FEA6 /* Env.swift in Sources */,
 				F32B9BDB2ABCD24600375D92 /* Colors.swift in Sources */,
+				F325390B2AC1B6A4000FF78F /* AlgoliaArticleModel.swift in Sources */,
 				F32B9BDF2ABCDAD200375D92 /* HeaderView.swift in Sources */,
 				F3F870872AB8A9C800EB0A3D /* ImageLoader.swift in Sources */,
 				F30043112AB4666700049397 /* ArticleRepository.swift in Sources */,
@@ -814,6 +830,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F32539072AC1AD26000FF78F /* XCRemoteSwiftPackageReference "algoliasearch-client-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/algolia/algoliasearch-client-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.18.2;
+			};
+		};
 		F32B9BC72ABC8B2700375D92 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -833,6 +857,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F32539082AC1AD26000FF78F /* AlgoliaSearchClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F32539072AC1AD26000FF78F /* XCRemoteSwiftPackageReference "algoliasearch-client-swift" */;
+			productName = AlgoliaSearchClient;
+		};
 		F32B9BC82ABC8B2700375D92 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F32B9BC72ABC8B2700375D92 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

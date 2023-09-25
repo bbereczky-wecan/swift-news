@@ -21,6 +21,7 @@ struct SearchScreenView: View {
                 await articlesRepository.findAll()
             }
         }
+        algoliaSearch.find("enigma")
     }
 
     var body: some View {
