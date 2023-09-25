@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import URLImage
 
 struct SearchListItem: View {
     var article: Article
