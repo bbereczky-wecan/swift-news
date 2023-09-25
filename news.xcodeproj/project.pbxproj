@@ -32,6 +32,7 @@
 		F367DB6E2ABC488D00B4FEA6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F367DB6B2ABC488D00B4FEA6 /* .gitignore */; };
 		F367DB702ABC4A5400B4FEA6 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = F367DB6F2ABC4A5400B4FEA6 /* Env.swift */; };
 		F390B5122AC1497D00F03F02 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F390B5112AC1497D00F03F02 /* UserDetailView.swift */; };
+		F390B5142AC14C4200F03F02 /* AsyncCircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F390B5132AC14C4200F03F02 /* AsyncCircleImageView.swift */; };
 		F3CA66272AB08B8200A894A5 /* SearchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA66262AB08B8200A894A5 /* SearchScreenView.swift */; };
 		F3CA66292AB08FE600A894A5 /* SearchListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA66282AB08FE600A894A5 /* SearchListItem.swift */; };
 		F3D9515D2AB059C400247CB1 /* newsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9515C2AB059C400247CB1 /* newsApp.swift */; };
@@ -84,6 +85,7 @@
 		F367DB6B2ABC488D00B4FEA6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F367DB6F2ABC4A5400B4FEA6 /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		F390B5112AC1497D00F03F02 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
+		F390B5132AC14C4200F03F02 /* AsyncCircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncCircleImageView.swift; sourceTree = "<group>"; };
 		F3CA66262AB08B8200A894A5 /* SearchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenView.swift; sourceTree = "<group>"; };
 		F3CA66282AB08FE600A894A5 /* SearchListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListItem.swift; sourceTree = "<group>"; };
 		F3D951592AB059C400247CB1 /* news.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = news.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,7 +188,6 @@
 		F32B9BE12ABCDB3D00375D92 /* LoginScreen */ = {
 			isa = PBXGroup;
 			children = (
-				F32B9BE92ABD806300375D92 /* Handlers */,
 				F32B9BD22ABC90C400375D92 /* GoogleSignInButton.swift */,
 				F32B9BD52ABC926600375D92 /* LoginScreenView.swift */,
 			);
@@ -199,6 +200,7 @@
 				F3F870832AB8A99300EB0A3D /* AsyncImageView.swift */,
 				F32B9BDC2ABCDA7F00375D92 /* LoadingView.swift */,
 				F32B9BDE2ABCDAD200375D92 /* HeaderView.swift */,
+				F390B5132AC14C4200F03F02 /* AsyncCircleImageView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -220,14 +222,6 @@
 				F32B9BEC2ABD8FE600375D92 /* Article.actions.swift */,
 			);
 			path = Actions;
-			sourceTree = "<group>";
-		};
-		F32B9BE92ABD806300375D92 /* Handlers */ = {
-			isa = PBXGroup;
-			children = (
-				F32B9BEA2ABD807500375D92 /* GoogleSignInHandler.swift */,
-			);
-			path = Handlers;
 			sourceTree = "<group>";
 		};
 		F32B9BF32ABDAF5E00375D92 /* Slices */ = {
@@ -324,6 +318,7 @@
 		F3F870852AB8A9BA00EB0A3D /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
+				F32B9BEA2ABD807500375D92 /* GoogleSignInHandler.swift */,
 				F3F870862AB8A9C800EB0A3D /* ImageLoader.swift */,
 			);
 			path = Handlers;
@@ -488,6 +483,7 @@
 				F3F870842AB8A99300EB0A3D /* AsyncImageView.swift in Sources */,
 				F32B9BEB2ABD807500375D92 /* GoogleSignInHandler.swift in Sources */,
 				F30043172AB467EF00049397 /* NewsApiResponseModel.swift in Sources */,
+				F390B5142AC14C4200F03F02 /* AsyncCircleImageView.swift in Sources */,
 				F32B9BF52ABDAF7400375D92 /* Auth.slice.swift in Sources */,
 				F367DB702ABC4A5400B4FEA6 /* Env.swift in Sources */,
 				F32B9BDB2ABCD24600375D92 /* Colors.swift in Sources */,

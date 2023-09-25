@@ -48,4 +48,14 @@ class GoogleSignInHandler {
             
         }
     }
+    
+    @MainActor
+    func signOut() {
+        store.auth.setAuthorized(false)
+        store.auth.setName("")
+        store.auth.setEmail("")
+        store.auth.setImageURL("")
+        store.auth.setAccessToken("")
+        store.auth.setIdToken("")
+    }
 }

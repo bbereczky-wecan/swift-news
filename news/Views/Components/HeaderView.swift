@@ -15,7 +15,9 @@ struct HeaderView: View {
                 Text("News").font(Font.custom( "Pacifico-Regular", size: 40)).foregroundColor(.accentColor)
                 Spacer()
                 if self.store.auth.authorized {
-                    AsyncImageView(src: self.store.auth.imageURL).aspectRatio(contentMode: .fill).frame(width: 50, height: 50).clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/).overlay(Circle().stroke(Color.accentColor, lineWidth: 2))
+                    NavigationLink(destination: UserDetailView()) {
+                        AsyncCircleImageView(src: self.store.auth.imageURL).frame(width: 50, height: 50)
+                    }
                 } else {
                     NavigationLink(destination: LoginScreenView()) {
                         Text("Log in")
