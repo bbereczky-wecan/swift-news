@@ -16,6 +16,7 @@ class AlgoliaSearchRepository: Algolia {
             case .success(let response):
                 print("All Hits: \(response.hits)") // Print all hits
                 
+//                response.encode(to: )
                 let articles: [AlgoliaArticleModel] = response.hits.map {
                     let id = $0.objectID.rawValue
                     let title = $0.object["title"] as? String ?? ""

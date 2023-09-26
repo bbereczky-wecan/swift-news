@@ -8,7 +8,7 @@
 import Foundation
 import AlgoliaSearchClient
 
-struct AlgoliaArticleModel: Identifiable {
+struct AlgoliaArticleModel: Identifiable, Codable {
     var id: String
     var title: String
     var description: String

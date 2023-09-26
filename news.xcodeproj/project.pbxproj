@@ -15,6 +15,9 @@
 		F325390B2AC1B6A4000FF78F /* AlgoliaArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F325390A2AC1B6A4000FF78F /* AlgoliaArticleModel.swift */; };
 		F325390D2AC1B6C0000FF78F /* AlgoliaSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F325390C2AC1B6C0000FF78F /* AlgoliaSearchRepository.swift */; };
 		F325390F2AC1BEAB000FF78F /* Algolia.swift in Sources */ = {isa = PBXBuildFile; fileRef = F325390E2AC1BEAB000FF78F /* Algolia.swift */; };
+		F32539122AC1D369000FF78F /* InstantSearch in Frameworks */ = {isa = PBXBuildFile; productRef = F32539112AC1D369000FF78F /* InstantSearch */; };
+		F32539142AC1D369000FF78F /* InstantSearchSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = F32539132AC1D369000FF78F /* InstantSearchSwiftUI */; };
+		F32539162AC322AA000FF78F /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32539152AC322AA000FF78F /* Http.swift */; };
 		F32B9BC92ABC8B2700375D92 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F32B9BC82ABC8B2700375D92 /* FirebaseAuth */; };
 		F32B9BCC2ABC8C0900375D92 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = F32B9BCB2ABC8C0900375D92 /* GoogleSignIn */; };
 		F32B9BCE2ABC8C0900375D92 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F32B9BCD2ABC8C0900375D92 /* GoogleSignInSwift */; };
@@ -75,6 +78,7 @@
 		F325390A2AC1B6A4000FF78F /* AlgoliaArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoliaArticleModel.swift; sourceTree = "<group>"; };
 		F325390C2AC1B6C0000FF78F /* AlgoliaSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoliaSearchRepository.swift; sourceTree = "<group>"; };
 		F325390E2AC1BEAB000FF78F /* Algolia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algolia.swift; sourceTree = "<group>"; };
+		F32539152AC322AA000FF78F /* Http.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
 		F32B9BCF2ABC8C6C00375D92 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F32B9BD12ABC8D1000375D92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F32B9BD22ABC90C400375D92 /* GoogleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInButton.swift; sourceTree = "<group>"; };
@@ -114,10 +118,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F32539142AC1D369000FF78F /* InstantSearchSwiftUI in Frameworks */,
 				F32B9BCE2ABC8C0900375D92 /* GoogleSignInSwift in Frameworks */,
 				F32539092AC1AD26000FF78F /* AlgoliaSearchClient in Frameworks */,
 				F32B9BC92ABC8B2700375D92 /* FirebaseAuth in Frameworks */,
 				F32B9BCC2ABC8C0900375D92 /* GoogleSignIn in Frameworks */,
+				F32539122AC1D369000FF78F /* InstantSearch in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +169,7 @@
 				F367DB6F2ABC4A5400B4FEA6 /* Env.swift */,
 				F32B9BDA2ABCD24600375D92 /* Colors.swift */,
 				F325390E2AC1BEAB000FF78F /* Algolia.swift */,
+				F32539152AC322AA000FF78F /* Http.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -356,6 +363,8 @@
 				F32B9BCB2ABC8C0900375D92 /* GoogleSignIn */,
 				F32B9BCD2ABC8C0900375D92 /* GoogleSignInSwift */,
 				F32539082AC1AD26000FF78F /* AlgoliaSearchClient */,
+				F32539112AC1D369000FF78F /* InstantSearch */,
+				F32539132AC1D369000FF78F /* InstantSearchSwiftUI */,
 			);
 			productName = news;
 			productReference = F3D951592AB059C400247CB1 /* news.app */;
@@ -433,6 +442,7 @@
 				F32B9BC72ABC8B2700375D92 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				F32B9BCA2ABC8C0900375D92 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				F32539072AC1AD26000FF78F /* XCRemoteSwiftPackageReference "algoliasearch-client-swift" */,
+				F32539102AC1D369000FF78F /* XCRemoteSwiftPackageReference "instantsearch-ios" */,
 			);
 			productRefGroup = F3D9515A2AB059C400247CB1 /* Products */;
 			projectDirPath = "";
@@ -508,6 +518,7 @@
 				F30043112AB4666700049397 /* ArticleRepository.swift in Sources */,
 				F30043142AB4674200049397 /* ArticleModel.swift in Sources */,
 				F3D9515D2AB059C400247CB1 /* newsApp.swift in Sources */,
+				F32539162AC322AA000FF78F /* Http.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -838,6 +849,14 @@
 				minimumVersion = 8.18.2;
 			};
 		};
+		F32539102AC1D369000FF78F /* XCRemoteSwiftPackageReference "instantsearch-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/algolia/instantsearch-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.26.1;
+			};
+		};
 		F32B9BC72ABC8B2700375D92 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -861,6 +880,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F32539072AC1AD26000FF78F /* XCRemoteSwiftPackageReference "algoliasearch-client-swift" */;
 			productName = AlgoliaSearchClient;
+		};
+		F32539112AC1D369000FF78F /* InstantSearch */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F32539102AC1D369000FF78F /* XCRemoteSwiftPackageReference "instantsearch-ios" */;
+			productName = InstantSearch;
+		};
+		F32539132AC1D369000FF78F /* InstantSearchSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F32539102AC1D369000FF78F /* XCRemoteSwiftPackageReference "instantsearch-ios" */;
+			productName = InstantSearchSwiftUI;
 		};
 		F32B9BC82ABC8B2700375D92 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;

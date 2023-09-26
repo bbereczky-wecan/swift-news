@@ -15,16 +15,8 @@ class ArticleRepository {
         store.startLoading()
         let url = URL(string: "\(ENV.API_URL)/top-headlines?country=us&apiKey=\(ENV.API_KEY)")!
        
-        defer {
-            store.finishLoading()
-        }
-        do {
-            let (data, _) = try await URLSession.shared.data(from: url)
-            let decodedResponse = try JSONDecoder().decode(NewsApiResponse.self, from: data)
-            store.setArticles(decodedResponse.articles)
-        }
-        catch {
-            print("Something went wrong. \(error)")
+        await Http.get(url: url) { (response: NewsApiResponse) in
+            store.setArticles(response.articles)
         }
     }
     
@@ -33,19 +25,10 @@ class ArticleRepository {
         if (!title.isEmpty) {
             store.startLoading()
             let url = URL(string: "\(ENV.API_URL)/top-headlines?country=us&apiKey=\(ENV.API_KEY)&q=\(title)")!
-
-            defer {
-                store.finishLoading()
+            
+            await Http.get(url: url) { (response: NewsApiResponse) in
+                store.setArticles(response.articles)
             }
-            do {
-                let (data, _) = try await URLSession.shared.data(from: url)
-                let decodedResponse = try JSONDecoder().decode(NewsApiResponse.self, from: data)
-                store.setArticles(decodedResponse.articles)
-            }
-            catch {
-                print("Something went wrong. \(error)")
-            }
-
         } else {
             await findAll()
         }

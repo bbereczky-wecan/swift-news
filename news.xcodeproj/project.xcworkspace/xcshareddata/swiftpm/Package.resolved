@@ -100,6 +100,24 @@
       }
     },
     {
+      "identity" : "instantsearch-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/algolia/instantsearch-ios",
+      "state" : {
+        "revision" : "f6cdd6da2d7def69d23fec4e73e6a2267a46e0f1",
+        "version" : "7.26.1"
+      }
+    },
+    {
+      "identity" : "instantsearch-telemetry-native",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/algolia/instantsearch-telemetry-native",
+      "state" : {
+        "revision" : "d9861ceb2fe25899a31672fb7c648ae8036d3221",
+        "version" : "0.1.3"
+      }
+    },
+    {
       "identity" : "interop-ios-for-google-sdks",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/interop-ios-for-google-sdks.git",
